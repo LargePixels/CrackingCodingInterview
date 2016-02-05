@@ -1,4 +1,4 @@
-package net.largepixels.crackingcodinginterview.Ch01;
+package net.largepixels.crackingcodinginterview.ch01;
 
 import java.util.HashMap;
 import java.util.Map;
