@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Created by johnminchuk on 2/5/16.
  */
-public class Ch01ex03 {
+public class Ch01Ex03 {
 
     private void runMe() {
         String a = "asdf";
@@ -70,8 +70,8 @@ public class Ch01ex03 {
     ///////////////////////////
 
     public static void main(String args[]) {
-        Ch01ex03 ch01ex03 = new Ch01ex03();
-        ch01ex03.runMe();
+        Ch01Ex03 ch01Ex03 = new Ch01Ex03();
+        ch01Ex03.runMe();
     }
 
 }
