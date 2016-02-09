@@ -1,5 +1,7 @@
 package net.largepixels.crackingcodinginterview.ch01;
 
+import net.largepixels.crackingcodinginterview.util.UtilMethods;
+
 /**
  * Created by johnminchuk on 2/5/16.
  */
@@ -33,35 +35,12 @@ public class Ch01Ex06 {
                 {'5', '6', '7', '8', '9', '0'}
         };
 
-        printMatrix(image4);
+        UtilMethods.printMatrix(image4);
 
         //char[][] rotated = rotate(image4, 6);
         char[][] rotated = rotateImage(image4);
 
-        printMatrix(image4);
-
-        //char[][] rotated = rotateImage(image2);
-
-        //printMatrix(rotated);
-
-    }
-
-    //book solution...
-    public char[][] rotate(char[][] matrix, int n) {
-        for (int layer = 0; layer < n / 2; ++layer) {
-            int first = layer;
-            int last = n - 1 - layer;
-            for ( int i = first; i < last; ++i ) {
-                int offset = i - first;
-                char top = matrix[first][i];
-                matrix[first][i] = matrix[last-offset][first];
-                matrix[first][i] = matrix[last-offset][first];
-                matrix[last-offset][first]  = matrix[last][last-offset];
-                matrix[last][last - offset] = matrix[i][last];
-                matrix[i][last] = top;
-            }
-        }
-        return matrix;
+        UtilMethods.printMatrix(image4);
     }
 
     private char[][] rotateImage(char[][] img) {
@@ -89,7 +68,7 @@ public class Ch01Ex06 {
 
                 System.out.println("----------");
 
-                printMatrix(img);
+                UtilMethods.printMatrix(img);
             }
         }
 
@@ -97,15 +76,22 @@ public class Ch01Ex06 {
 
     }
 
-    private void printMatrix(char[][] img) {
-        System.out.println("----------");
-
-        for (int y = 0; y < img.length; y++){
-            for (int x = 0; x < img[y].length; x++) {
-                System.out.print( img[y][x] + " ");
+    //book solution...
+    public char[][] rotate(char[][] matrix, int n) {
+        for (int layer = 0; layer < n / 2; ++layer) {
+            int first = layer;
+            int last = n - 1 - layer;
+            for ( int i = first; i < last; ++i ) {
+                int offset = i - first;
+                char top = matrix[first][i];
+                matrix[first][i] = matrix[last-offset][first];
+                matrix[first][i] = matrix[last-offset][first];
+                matrix[last-offset][first]  = matrix[last][last-offset];
+                matrix[last][last - offset] = matrix[i][last];
+                matrix[i][last] = top;
             }
-            System.out.print("\n");
         }
+        return matrix;
     }
 
     public static void main(String args[]) {
