@@ -42,4 +42,23 @@ public class NodeUtils {
 
         return n1;
     }
+
+    /**
+     *
+     * @param head of the linked list
+     * @param position numbered position in the linked list
+     * @return Node at position X
+     */
+    public static Node getNodeAtPosition(Node head, int position) {
+        int counter = 1;
+        while ( head != null ) {
+            if (position == counter) {
+                return head;
+            }
+            counter++;
+            head = head.next;
+        }
+
+        return null;
+    }
 }

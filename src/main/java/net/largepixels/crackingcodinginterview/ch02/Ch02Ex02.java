@@ -16,6 +16,7 @@ public class Ch02Ex02 {
         System.out.println("The 3 to last node iterative is: " + nToLast.value);
 
         getNthToLastRecursive(head, 3, 0);
+        nthToLastBook(head, 3);
     }
 
     private void getNthToLastRecursive(Node head, int k, int count) {
@@ -23,8 +24,7 @@ public class Ch02Ex02 {
             return;
         }
 
-        count++;
-        getNthToLastRecursive(head.next, k, count);
+        getNthToLastRecursive(head.next, k, ++count);
 
         if ( k == count - k ) {
             System.out.println("The " + k + " to last node recursive is: " + head.value);
@@ -49,6 +49,20 @@ public class Ch02Ex02 {
         }
 
         return null;
+    }
+
+    private int nthToLastBook(Node head, int k) {
+        if ( head == null ) {
+            return 0;
+        }
+
+        int i = nthToLastBook(head.next, k) + 1;
+
+        if ( i == k ) {
+            System.out.println("The " + k + " to last node books way is: " + head.value);
+        }
+
+        return i;
     }
 
     public static void main(String args[]) {
