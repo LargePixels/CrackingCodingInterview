@@ -13,8 +13,22 @@ public class Ch02Ex02 {
         NodeUtils.printList(head);
 
         Node nToLast = getNthToLastNode(head, 3);
+        System.out.println("The 3 to last node iterative is: " + nToLast.value);
 
-        System.out.println("The 3 to last node value is: " + nToLast.value);
+        getNthToLastRecursive(head, 3, 0);
+    }
+
+    private void getNthToLastRecursive(Node head, int k, int count) {
+        if (head.next == null) {
+            return;
+        }
+
+        count++;
+        getNthToLastRecursive(head.next, k, count);
+
+        if ( k == count - k ) {
+            System.out.println("The " + k + " to last node recursive is: " + head.value);
+        }
     }
 
     private Node getNthToLastNode(Node head, int n) {
