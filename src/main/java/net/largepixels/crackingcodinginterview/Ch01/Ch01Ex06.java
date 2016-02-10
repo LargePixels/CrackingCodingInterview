@@ -35,12 +35,12 @@ public class Ch01Ex06 {
                 {'5', '6', '7', '8', '9', '0'}
         };
 
-        UtilMethods.printMatrix(image4);
+        UtilMethods.printMatrix(image2);
 
         //char[][] rotated = rotate(image4, 6);
-        char[][] rotated = rotateImage(image4);
+        char[][] rotated = rotateImage(image2);
 
-        UtilMethods.printMatrix(image4);
+        UtilMethods.printMatrix(image2);
     }
 
     private char[][] rotateImage(char[][] img) {

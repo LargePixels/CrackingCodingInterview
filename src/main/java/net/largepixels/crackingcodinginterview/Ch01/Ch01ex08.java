@@ -3,7 +3,7 @@ package net.largepixels.crackingcodinginterview.ch01;
 /**
  * Created by johnminchuk on 2/7/16.
  */
-public class Ch01ex08 {
+public class Ch01Ex08 {
 
     private void runMe() {
         String s1 = "watterbottle";
@@ -28,8 +28,8 @@ public class Ch01ex08 {
 
 
     public static void main(String args[]) {
-        Ch01ex08 ch01ex08 = new Ch01ex08();
-        ch01ex08.runMe();
+        Ch01Ex08 ch01Ex08 = new Ch01Ex08();
+        ch01Ex08.runMe();
     }
 
 }
