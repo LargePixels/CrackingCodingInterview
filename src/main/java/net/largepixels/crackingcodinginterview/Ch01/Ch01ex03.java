@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Ch01Ex03 {
 
     private void runMe() {
-        String a = "asdf";
+        String a = "addNodesIter";
         String b = "dsfa";
 
         Boolean isPerm1 = isPermutationBySort(a, b);
