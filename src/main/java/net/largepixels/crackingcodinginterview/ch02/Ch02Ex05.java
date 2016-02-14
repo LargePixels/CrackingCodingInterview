@@ -53,7 +53,7 @@ public class Ch02Ex05 {
         Node rtn = null;
         Node end = null;
         int carry = 0;
-        while ( n1 != null && n2 != null ) {
+        while ( n1 != null && n2 != null && carry == 0) {
             int v1 = n1 != null ? (int) n1.value : 0;
             int v2 = n2 != null ? (int) n2.value : 0;
 

@@ -55,5 +55,22 @@ public class Node<T> {
         return head;
     }
 
+    public static <T> void loopIt(Node<T> head, int loopStartIndex) {
+        Node current = head;
+        Node end = null;
+        while ( current != null ) {
+            if ( current.next == null ) {
+                end = current;
+            }
+            current = current.next;
+        }
+
+        current = head;
+        for (int i = 0; i < loopStartIndex - 1; i++) {
+            current = current.next;
+        }
+        end.next = current;
+    }
+
 
 }
