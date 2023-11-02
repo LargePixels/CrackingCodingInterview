@@ -12,12 +12,11 @@ public class Ch02Ex04 {
 
     private void runMe() {
         Node head = NodeUtils.singlyDupedList();
-
         NodeUtils.printList(head);
 
-        Node paritioned = partitionAround(head, "c");
+        Node partitioned = partitionAround(head, "c");
 
-        NodeUtils.printList(paritioned);
+        NodeUtils.printList(partitioned);
     }
 
     private Node partitionAround(Node head, String d) {

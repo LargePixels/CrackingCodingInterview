@@ -18,11 +18,11 @@ public class Ch01Ex01 {
         System.out.println("Has dupes tested with hash? " + dupes2);
 
         String duplicateLetters3 = "abelkjidjal";
-        Boolean dupes3 = checkDupesWithHash(duplicateLetters3);
+        Boolean dupes3 = checkDupesBinary(duplicateLetters3);
         System.out.println("Has dupes tested with bools? " + dupes3);
 
         String duplicateLetters4 = "abelkjid";
-        Boolean dupes4 = checkDupesWithHash(duplicateLetters4);
+        Boolean dupes4 = checkDupesBinary(duplicateLetters4);
         System.out.println("Has dupes tested with bools? " + dupes4);
 
     }
@@ -52,8 +52,11 @@ public class Ch01Ex01 {
 
         for (char theChar : charArray ) {
             int charInt = (int) theChar;
-            if (charSpot[charInt]) {
+            if (charSpot[charInt] != null) {
                 return true;
+            }
+            else {
+                charSpot[charInt] = true;
             }
         }
 
